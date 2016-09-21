@@ -62,7 +62,7 @@ class RateController extends Controller {
         $model = new Rate();
         if ($model->load(Yii::$app->request->post())) {
             $model->addtion_var = Rate::ADDTION_VAR;
-            $model->deductible = ($_POST['Rate']['buy_back_limit'] > 8000) ? (0.07 * $_POST['Rate']['buy_back_limit']) : (0.05 * $_POST['Rate']['buy_back_limit']);
+            $model->deductible = ($_POST['Rate']['buy_back_limit'] > 80000) ? (0.07 * $_POST['Rate']['buy_back_limit']) : (0.05 * $_POST['Rate']['buy_back_limit']);
             $model->premium = (($_POST['Rate']['buy_back_limit'] - $model->deductible) * ($_POST['Rate']['base_rate'] * (Rate::ADDTION_VAR + ($_POST['Rate']['debit_modification'] - $_POST['Rate']['credit_modification']))));
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

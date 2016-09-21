@@ -13,7 +13,7 @@ angular.module('RateApp', [])
                     'addtion_var': 0,
                 };
                 this.changgeneral = function () {
-                    scope.rate.deductible = (scope.rate.buy_back_limit > 80000) ? (0.07 * scope.rate.buy_back_limit) : (0.05 * scope.rate.buy_back_limit);
+                    scope.rate.deductible = (scope.rate.buy_back_limit > 8000) ? (0.07 * scope.rate.buy_back_limit) : (0.05 * scope.rate.buy_back_limit);
                     scope.rate.premium = ((scope.rate.buy_back_limit - scope.rate.deductible) * (scope.rate.base_rate * (scope.rate.addtion_var + (scope.rate.debit_modification - scope.rate.credit_modification))));
                 }
             }]);
