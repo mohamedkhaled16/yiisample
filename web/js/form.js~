@@ -1,0 +1,6 @@
+angular.module('RateApp', [])
+    .controller('rateCtrl', ['$http',function($http){
+$this.rate={
+
+}
+        }]);
